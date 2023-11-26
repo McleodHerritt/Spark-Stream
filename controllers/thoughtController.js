@@ -113,6 +113,7 @@ module.exports = {
   },
 
   async removeReaction(req, res) {
+    console.log(req.params);
     try {
       const thought = await Thought.findOneAndUpdate(
         { _id: req.params.thoughtId },
