@@ -141,10 +141,10 @@ npm start
 
 ## Walkthrough Video
 
-Link to Walkthrough Video - This video demonstrates the functionality of the API and how to use it.
+[Link to Walkthrough Video](https://app.screencastify.com/v2/watch/G3tQZ2IJ5dAuzX24qw75) - This video demonstrates the functionality of the API and how to use it.
 
 ## Contact
 
 - **Author:** Nicole Herritt
 - **GitHub:** [McleodHerritt](https://github.com/McleodHerritt)
-- **Repository**
+- **Repository** [Spark-Stream](https://github.com/McleodHerritt/Spark-Stream)
