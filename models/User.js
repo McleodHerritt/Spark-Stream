@@ -1,6 +1,4 @@
 const { Schema, model } = require("mongoose");
-const friendSchema = require("./Friend");
-const router = require("express").Router();
 
 const userSchema = new Schema({
   username: {
@@ -21,7 +19,7 @@ const userSchema = new Schema({
       ref: "Thought",
     },
   ],
-  friends: [friendSchema],
+  friends: [{ type: Schema.Types.ObjectId, ref: "User" }],
 });
 
 userSchema.virtual("friendCount").get(function () {

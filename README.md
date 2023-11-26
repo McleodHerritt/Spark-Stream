@@ -53,15 +53,13 @@ git clone https://github.com/McleodHerritt
 2. Navigate to the project directory in your terminal.
 3. Install the necessary Node modules:
 
-```
-bash
+```bash
 npm install
 ```
 
 4. Start the server:
 
-```
-bash
+```bash
 npm start
 ```
 

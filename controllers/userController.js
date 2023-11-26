@@ -86,19 +86,24 @@ module.exports = {
 
   async addFriend(req, res) {
     try {
-      const user = await User.findOneAndUpdate(
-        { _id: req.params.UserId },
-        { $push: { friends: req.body } },
+      const friendExists = await User.exists({ _id: req.params.friendId });
+      if (!friendExists) {
+        return res.status(404).json({ message: "Friend not found" });
+      }
+
+      const updatedUser = await User.findByIdAndUpdate(
+        req.params.UserId,
+        { $addToSet: { friends: req.params.friendId } },
         { new: true }
       );
 
-      if (!user) {
-        return res.status(404).json({ message: "No user found for this id" });
+      if (!updatedUser) {
+        return res.status(404).json({ message: "User not found" });
       }
 
-      res.json(user);
+      res.json(updatedUser);
     } catch (err) {
-      console.log(err);
+      console.error(err);
       res.status(500).json(err);
     }
   },
