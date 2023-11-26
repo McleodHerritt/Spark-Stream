@@ -2,6 +2,19 @@
 
 NoSQL Social Network API
 
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Technologies Used](#technologies-used)
+3. [Features](#features)
+4. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+5. [Usage](#usage)
+6. [Models and Schema](#models-and-schema)
+7. [Walkthrough Video](#walkthrough-video)
+8. [Contact](#contact)
+
 ## Overview
 
 This NoSQL Social Network API is a backend application designed to power a social networking web application. It allows users to share thoughts, react to friends' thoughts, and manage a friend list. Built with Express.js and MongoDB, this API is well-suited for handling large amounts of unstructured data, a common requirement for social networking platforms.
@@ -32,16 +45,23 @@ Prerequisites
 ## Installation
 
 1. Clone the repository to your local machine.
+
+```bash
+git clone https://github.com/McleodHerritt
+```
+
 2. Navigate to the project directory in your terminal.
 3. Install the necessary Node modules:
 
 ```
+bash
 npm install
 ```
 
 4. Start the server:
 
 ```
+bash
 npm start
 ```
 
@@ -63,6 +83,8 @@ npm start
 
 Link to Walkthrough Video - This video demonstrates the functionality of the API and how to use it.
 
-## Repository
+## Contact
 
-GitHub Repository Link
+- **Author:** Nicole Herritt
+- **GitHub:** [McleodHerritt](https://github.com/McleodHerritt)
+- **Repository**
