@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const reactionSchema = require("../models/Reaction");
 const Thought = require("../models/Thoughts");
+const User = require("../models/User");
 
 module.exports = {
   async getThoughts(req, res) {
@@ -20,8 +21,9 @@ module.exports = {
     }
   },
   async getSingleThought(req, res) {
+    console.log(req.params);
     try {
-      const thought = await Thought.findOne({ _id: req.params.ThoughtId })
+      const thought = await Thought.findOne({ _id: req.params.thoughtId })
         .select("-__v")
         .lean();
 
@@ -41,6 +43,14 @@ module.exports = {
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
+
+      const userId = req.body.userId;
+      await User.findByIdAndUpdate(
+        userId,
+        { $push: { thoughts: thought._id } },
+        { new: true }
+      );
+
       res.json(thought);
     } catch (err) {
       res.status(500).json(err);
