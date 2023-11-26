@@ -147,4 +147,3 @@ npm start
 
 - **Author:** Nicole Herritt
 - **GitHub:** [McleodHerritt](https://github.com/McleodHerritt)
-- **Repository** [Spark-Stream](https://github.com/McleodHerritt/Spark-Stream)
